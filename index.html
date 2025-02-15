@@ -4,39 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style copy.css">
 </head>
 <body>
-
+  
  <div id="main">
-  <div id="sub">
-
-    <p><b> CLICK THE BUTTON TO UPLOAD THE IMAGE
-    </b></p>
+  <p><u>Welcome To Image Resizer</u></p>
+    <div id="opt1">
+    <p>Choose from predefined sizes given below</p>
+    <label>
+    <input type="radio" name="size" id="size1" value="a4">A4
+    </label>
+  
+    <label>
     <br><br>
-    <label style="margin-left: 4px;">WIDTH</label>
-    <input type="number" placeholder="enter the width required" id="width">
+    <input type="radio" name="size" id="size2" value="passp">passport
+    </label>
+    </div>
+    <div id="opt2">
+    <p>Choose custom size</p>
+
+    <label for="width">Width</label>
+    <input type="number" id="width" placeholder="width" >
+    
     <br><br>
-    <label style="margin-left: 4px;"> HEIGHT</label>
-    <input type="number" placeholder="enter the height required" id="height">
-
-    <input type="file" id="inp" style="display: none;" accept="image/*">
-    <label for="inp" class="custom">choose your image</label>
-  </div>
-  <div id="view">
-    <p  style="text-align: center; font-family: cursive;"><b>IMAGE PREVIEW
-    </b></p>
+    <label for="height">Height</label>
+    <input type="number" id="height" placeholder="height">
+    <label>
+      <br><br>
+      <input type="radio" name="std" id="corp1" value="cm">cm
+        </label>
+      <label>
+        
+        <input type="radio" name="std" id="corp2" value="pix">pixels
+        </label>
+    </div>
     
+   <input type="file" id="inp" style="display: none;" accept="image/*">
+   <label for="inp" class="but" id="cls">Choose Your file</label>
+   <button id="butt" style="display: none;" onclick=resizeImage()></button>
+   <label for="butt" class="but" style="display: none;" id="sho">Resize & Download</label>
 
-    <img src="alt.png" height="200" width="200" id="preview">
-    
-    <button onclick="resizeImage()" id="resiz" style="display: none;"></button>
-    
-    <label for="resiz" class="custom1" style="opacity: 0;" id="final">resize and download</label>
-
-  </div>
   
  </div>
+ <div id="img-cont">
+  <img src="somef.jpg" class="img" >
+
+ </div>
+ 
  <canvas id="canvas" style="display: none;"></canvas>
 <script src="script.js">
 </script>
